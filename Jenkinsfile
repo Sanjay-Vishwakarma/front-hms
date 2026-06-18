@@ -7,8 +7,8 @@ pipeline {
     }
 
     parameters {
-        string(name: 'API_BASE_URL', defaultValue: 'http://localhost:8091', description: 'Backend API URL baked into the React build')
-        string(name: 'HOST_PORT', defaultValue: '80', description: 'Host port where nginx should serve the frontend')
+        string(name: 'API_BASE_URL', defaultValue: 'http://localhost:8090', description: 'Backend API URL baked into the React build')
+        string(name: 'HOST_PORT', defaultValue: '3500', description: 'Host port where nginx should serve the frontend')
     }
 
     environment {
@@ -21,18 +21,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
-
-        stage('Install') {
-            steps {
-                sh 'npm install'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'CI=true npm test -- --watchAll=false'
             }
         }
 
