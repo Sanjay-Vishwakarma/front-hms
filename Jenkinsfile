@@ -7,7 +7,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'API_BASE_URL', defaultValue: 'http://localhost:8090', description: 'Backend API URL baked into the React build')
+        string(name: 'API_BASE_URL',defaultValue: 'https://api-hms.soaorg.in') 
         string(name: 'HOST_PORT', defaultValue: '3500', description: 'Host port where nginx should serve the frontend')
     }
 

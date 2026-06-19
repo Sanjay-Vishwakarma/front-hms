@@ -7,7 +7,7 @@ RUN npm install
 
 COPY . .
 
-ARG REACT_APP_API_BASE_URL=http://localhost:8091
+ARG REACT_APP_API_BASE_URL=https://api-hms.soaorg.in
 ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
 
 RUN npm run build
