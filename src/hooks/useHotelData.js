@@ -146,8 +146,8 @@ function normalizeRoom(room) {
 function normalizeBooking(booking) {
   return {
     ...booking,
-    roomId: Number(booking.roomId),
-    guestId: Number(booking.guestId),
+    roomId: booking.roomId,
+    guestId: booking.guestId,
     numberOfGuests: Number(booking.numberOfGuests),
   };
 }
